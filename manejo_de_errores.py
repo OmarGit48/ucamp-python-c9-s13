@@ -32,7 +32,17 @@
 ############################################
 # Manejo de errores con exceptciones y ciclos
 
-dividendo = int(input('Ingrese el dividendo: '))
-divisor = int(input('Ingrese el divisro: '))
-print('El resultado es: ', dividendo / divisor)
-
+while True:
+    try:
+        dividendo = int(input('Ingrese el dividendo: '))
+        divisor = int(input('Ingrese el divisro: '))
+        print('El resultado es: ', dividendo / divisor)
+        break
+    except ValueError:
+        print('Debe ingresarse un número')
+    except ZeroDivisionError:
+        print('No se puede dividir entre cero')
+    
+print('Fin del programa')
+    
+        
